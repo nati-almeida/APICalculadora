@@ -51,8 +51,8 @@ app.post('/potencia', (req, res) => {
   });
 
   //raiz quadrada de 144
-  app.get('/raiz', (req, res) => {
-    const num = Number(req.query.num);
+  app.post('/raiz', (req, res) => {
+    const num = Number(req.body.num);
     const raiz = num ** 0.5;
     res.send(`A raiz quadrada de ${num} é ${raiz}`);
   };
